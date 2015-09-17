@@ -1,0 +1,10 @@
+{
+	entry = {
+		bundle = installresetprefs;
+		cell = PSLinkCell;
+		detail = "installresetprefsListController";
+		icon = "installresetprefs.png";
+		isController = 1;
+		label = InstallReset;
+	};
+}

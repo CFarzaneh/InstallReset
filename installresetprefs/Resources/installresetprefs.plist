@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.cfarzaneh.installresetprefs</string>
+			<key>key</key>
+			<string>killswitch</string>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Reset Icon Layout</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.cfarzaneh.installresetprefs</string>
+			<key>key</key>
+			<string>forinstall</string>
+			<key>label</key>
+			<string>After App Install</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.cfarzaneh.installresetprefs</string>
+			<key>key</key>
+			<string>foruninstall</string>
+			<key>label</key>
+			<string>After App Uninstall</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>© 2015 Cameron Farzaneh</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>installPrefsDonate:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Donate</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>openTwitterLink:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Twitter @persian_cam</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>InstallReset</string>
+</dict>
+</plist>

@@ -1,0 +1,9 @@
+Package: com.cfarzaneh.installreset
+Name: InstallReset
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Auto Reset Home Screen Layout Upon App Installation or Uninstallation
+Maintainer: CFarzaneh
+Author: CFarzaneh
+Section: Tweaks
