@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import <SpringBoard/SBApplication.h>
+#import <GraphicsServices/GraphicsServices.h>
 
 @interface FBBundleInfo : NSObject
 
@@ -34,7 +35,7 @@ static void installResetPrefs() {
 	if (enabled) {
 	if (enabledforinstall) {
 	if (self.percentComplete == 0.96) {
-		    double delayInSeconds = 1.0;
+		    double delayInSeconds = 1.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         		
@@ -58,10 +59,18 @@ static void installResetPrefs() {
 	installResetPrefs();
 	if (enabled) {
 	if (enabledforuninstall) {
+
 	NSString *iconStatePlist = [@"/User/Library/SpringBoard/IconState.plist" stringByExpandingTildeInPath];
     	[[NSFileManager defaultManager] removeItemAtPath:iconStatePlist error:nil];
+    	        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"InstallReset"
+                              message:@"Reset Home Screen Layout is not working when uninstalling applications on iOS 9 yet. If you are on iOS 8, please downgrade via Cydia. Sorry for the inconvenience."
+                              delegate:nil
+                              cancelButtonTitle:@"Dismiss"
+                              otherButtonTitles:nil];
+        [alert show];
 
-	GSSendAppPreferencesChanged(CFSTR("com.apple.springboard"), CFSTR("iconState"));
+	//GSSendAppPreferencesChanged(CFSTR("com.apple.springboard"), CFSTR("iconState"));
 	}
 }
 }
