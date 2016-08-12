@@ -39,7 +39,7 @@ static void installResetPrefs() {
  			    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
 				dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
         		
-					NSString *iconStatePlist = [@"/User/Library/SpringBoard/IconSupportState.plist" stringByExpandingTildeInPath];
+					NSString *iconStatePlist = [@"/User/Library/SpringBoard/IconState.plist" stringByExpandingTildeInPath];
 				   	[[NSFileManager defaultManager] removeItemAtPath:iconStatePlist error:nil];
 					//GSSendAppPreferencesChanged(CFSTR("com.apple.springboard"), CFSTR("iconState")); <------ This is the problem that needs to be fixed
 
